@@ -45,4 +45,4 @@ C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\Med
 C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\MedClinica.WebApi\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\MedClinica.WebApi\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\MedClinica.WebApi\obj\Debug\netcoreapp3.1\MedClinica.WebApi.csproj.CopyComplete
-C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\MedClinica.WebApi\obj\Debug\netcoreapp3.1\MedClinica.WebApi.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\Área de Trabalho\todos os meus projetos\API\BackEnd2\MedClinica.WebApi\obj\Debug\netcoreapp3.1\MedClinica.WebApi.csproj.AssemblyReference.cache

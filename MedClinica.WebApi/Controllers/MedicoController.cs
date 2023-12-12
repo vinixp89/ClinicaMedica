@@ -7,35 +7,35 @@ namespace MedClinica.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Paciente : ControllerBase
+    public class MedicoController : ControllerBase
     {
-        // GET: api/<Paciente>
+        // GET: api/<Medico>
         [HttpGet]
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };
         }
 
-        // GET api/<Paciente>/5
+        // GET api/<Medico>/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
 
-        // POST api/<Paciente>
+        // POST api/<Medico>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/<Paciente>/5
+        // PUT api/<Medico>/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/<Paciente>/5
+        // DELETE api/<Medico>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
