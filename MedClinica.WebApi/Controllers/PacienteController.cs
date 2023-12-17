@@ -1,5 +1,7 @@
 ﻿using MedClinica.WebApi.Data;
+using MedClinica.WebApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,18 +23,18 @@ namespace MedClinica.WebApi.Controllers
         }
 
 
-        // GET: api/<Paciente>
-        [HttpGet]
-        public IEnumerable<string> Get()
-        {
-            return new string[] { "value1", "value2" };
-        }
+        ////GET: api/<Paciente>
+        //[HttpGet]
+        //public IEnumerable<string> Get()
+        //{
+        //    return new string[] { "value1", "value2" };
+        //}
 
-        // GET api/<Paciente>/5
+        //GET api/<Paciente>/5
         [HttpGet]
         public IActionResult Get(int id)
         {
-            return Ok (_context.Pacientes);
+            return Ok(_context.Pacientes);
         }
 
         [HttpGet("{id}")]
@@ -53,20 +55,40 @@ namespace MedClinica.WebApi.Controllers
 
         // POST api/<Paciente>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post(int id,Paciente paciente)
         {
+          var par = _context.Pacientes.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            _context.SaveChanges();
+            if (paciente == null) return BadRequest("paciente não localizado");
+
+            return Ok(paciente);
         }
 
         // PUT api/<Paciente>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, Paciente paciente)
         {
+            var par = _context.Pacientes.AsNoTracking().FirstOrDefault(a => a.Id == id);
+            _context.SaveChanges();
+            if (paciente == null) return BadRequest("paciente não localizado");
+
+            _context.Update(paciente);
+            _context.SaveChanges();
+            return Ok(paciente);
         }
 
         // DELETE api/<Paciente>/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+            var paciente = _context.Pacientes.FirstOrDefault(a => a.Id==id);
+            if (paciente == null) BadRequest("aluno não encontrado");
+
+            _context.Remove(paciente);
+            _context.SaveChanges();
+
+
+
         }
     }
 }
